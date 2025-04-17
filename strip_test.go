@@ -113,6 +113,17 @@ You can even share code stuff.`
 	}
 }
 
+func TestStripMarkdownLinks(t *testing.T) {
+	in := "<a href=\"url\">txt</a>"
+	out := "txt"
+	if res := StripOptions(in, Options{
+		SkipHTMLContent: true,
+	}); res != out {
+		t.Errorf("Original:\n\n%s\n\nGot:\n\n%s", in, res)
+	}
+
+}
+
 func ExampleStrip() {
 	fmt.Println(Strip(`# Hello, world!
 

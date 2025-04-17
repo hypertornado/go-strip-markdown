@@ -1,5 +1,6 @@
 package stripmd
 
 type Options struct {
-	SkipImages bool
+	SkipImages      bool
+	SkipHTMLContent bool
 }

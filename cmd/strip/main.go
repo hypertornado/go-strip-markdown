@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/writeas/go-strip-markdown"
 	"os"
 )
 
